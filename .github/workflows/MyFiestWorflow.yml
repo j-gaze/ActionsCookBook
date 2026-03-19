@@ -14,7 +14,8 @@ jobs:
       - run: |
           echo "Hello World 👋 from ${{ github.actor }}." 
           echo "Current branch is 🤫 '${{ github.ref }}'."
-      - run: |
+      - name: Second echo
+        run: |
           echo "Hello ${{ vars.WHO_TO_GREET }} from ${{ github.actor }}."
           echo "My secret is ${{ secrets.MY_SECRET }}."
       - name: Checkout
