@@ -9,6 +9,7 @@ jobs:
             contents: read
             pull-requests: write
         steps:
+            - run: echo "::add-matcher::$GITHUB_ACTION_PATH/actionlint-matcher.json"
             - run: |
                 echo "Workflow triggered in branch '${{ github.ref }}'."
                 echo "Workflow triggered by event '${{ github.event_name }}'."
